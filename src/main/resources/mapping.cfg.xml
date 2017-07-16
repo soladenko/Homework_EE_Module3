@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+
+    <class name="Model.Company" table="companies">
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+
+    </class>
+    <class name="Model.Skill" table="skills">
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+
+    </class>
+
+    <class name="Model.Project" table="projects">
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="cost" column="cost" type="int"/>
+
+    </class>
+
+    <class name="Model.Customer" table="customers">
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="country" column="country" type="int"/>
+
+    </class>
+
+    <class name="Model.Developer" table="developers">
+        <id name="id" type="int" column="id">
+            <generator class="increment"/>
+        </id>
+        <property name="name" column="name" type="string"/>
+        <property name="surname" column="surname" type="string"/>
+        <property name="age" column="age" type="int"/>
+        <property name="salary" column="salary" type="int"/>
+
+
+    </class>
+
+
+
+
+
+
+</hibernate-mapping>
